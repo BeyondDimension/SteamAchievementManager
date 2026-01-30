@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyTitle>Steam Achievement Manager</AssemblyTitle>
     <Company>Gibbed</Company>
@@ -15,12 +15,12 @@
     <RepositoryType>Git</RepositoryType>
     <ApplicationIcon>Blank.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Platforms>x86</Platforms>
+    <Platforms>x86;AnyCPU</Platforms>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="DoubleBufferedListView.cs"/>
-    <Compile Update="Manager.cs"/>
+    <Compile Update="DoubleBufferedListView.cs" />
+    <Compile Update="Manager.cs" />
     <Compile Update="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -32,6 +32,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SAM.API\SAM.API.csproj"/>
+    <ProjectReference Include="..\SAM.API\SAM.API.csproj" />
   </ItemGroup>
 </Project>

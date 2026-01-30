@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyTitle>Steam Achievement Manager Picker</AssemblyTitle>
     <Company>Gibbed</Company>
@@ -15,12 +15,12 @@
     <RepositoryType>it</RepositoryType>
     <ApplicationIcon>SAM.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Platforms>x86</Platforms>
+    <Platforms>x86;AnyCPU</Platforms>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="DoubleBufferedListView.cs"/>
-    <Compile Update="GamePicker.cs"/>
+    <Compile Update="DoubleBufferedListView.cs" />
+    <Compile Update="GamePicker.cs" />
     <EmbeddedResource Update="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -32,6 +32,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SAM.API\SAM.API.csproj"/>
+    <ProjectReference Include="..\SAM.API\SAM.API.csproj" />
   </ItemGroup>
 </Project>
