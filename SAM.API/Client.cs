@@ -84,7 +84,7 @@ public class Client : IDisposable
             SteamClient = Steam.CreateInterface<Wrappers.SteamClient018>("SteamClient018");
             if (SteamClient == null)
             {
-                throw new ClientInitializeException(ClientInitializeFailure.CreateSteamClient, "failed to create ISteamClient017");
+                throw new ClientInitializeException(ClientInitializeFailure.CreateSteamClient, "failed to create ISteamClient018");
             }
 
             _Pipe = SteamClient.CreateSteamPipe();
@@ -112,7 +112,7 @@ public class Client : IDisposable
             SteamApps001 = SteamClient.GetSteamApps001(_User, _Pipe);
             SteamApps008 = SteamClient.GetSteamApps008(_User, _Pipe);
             SteamRemoteStorage = SteamClient.GetSteamRemoteStorage012(_User, _Pipe);
-            SteamInventory = SteamClient.GetSteamInventory002(_User, _Pipe);
+            //SteamInventory = SteamClient.GetSteamInventory002(_User, _Pipe);
         }
         finally
         {
